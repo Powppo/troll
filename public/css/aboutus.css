@@ -1,0 +1,45 @@
+.title {
+    position: relative;
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 35px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.policy {
+    position: relative;
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: -40px;
+    margin-top: 80px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.pcontent {
+    position: relative;
+
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-top: 50px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.image-grid {
+    background-color: rgba(255, 255, 255, 0.726);
+    margin-top: 90px;
+    margin-left: 430px;
+    padding: 80px 0;
+    width: 1100px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px 0 rgb(255, 255, 255);
+  }

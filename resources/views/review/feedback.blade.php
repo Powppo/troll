@@ -22,9 +22,13 @@
     </div>
     </div>
     <div class="col-md-12">
-    <div class="form-group">
-    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-    </div>
+        <div class="form-group">
+        <select name="subject" id="subject" class="form-control">
+          <option selected>Critics</option>
+          <option>Advice</option>
+          <option>Support</option>
+        </select>
+      </div>
     </div>
     <div class="col-md-12">
     <div class="form-group">

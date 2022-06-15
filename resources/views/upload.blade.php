@@ -19,8 +19,15 @@
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="category" id="category" placeholder="Category">
-        </div>
+        <select name="category" id="category" class="form-control">
+          <option selected>Category...</option>
+          <option>Keyboard</option>
+          <option>Mouse</option>
+          <option>Audio</option>
+          <option>Monitor</option>
+          <option>Others</option>
+        </select>
+      </div>
     </div>
     
     <div class="col-md-12">
@@ -31,21 +38,17 @@
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Quantity">
-        </div>
+        <select name="quantity" id="quantity" class="form-control">
+          <option selected>Quantity...</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
     </div>
     
-    <div class="col-md-12">
-        <div class="form-group">
-            <input type="text" class="form-control" name="country" id="country" placeholder="Country">
-        </div>
-    </div>
-
-    <div class="col-md-12">
-        <div class="form-group">
-            <input type="text" class="form-control" name="city" id="city" placeholder="City">
-        </div>
-    </div>
 
     <div class="col-md-12">
         <div class="form-group">
@@ -55,10 +58,36 @@
 
     <div class="col-md-12">
         <div class="form-group">
+        <select name="country" id="country" class="form-control">
+          <option selected>Country...</option>
+          <option>Indonesia</option>
+          <option>Singapore</option>
+          <option>Malaysia</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+        <select name="city" id="city" class="form-control">
+          <option selected>City...</option>
+          <option>Malang</option>
+          <option>Jakarta</option>
+          <option>Singapore</option>
+          <option>Bandung</option>
+          <option>Kuala Lumpur</option>
+          <option>Malacca</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
             <input type="file" class="form-control" name="path_offer" id="path_offer" placeholder="path_offer">
         </div>
     </div>
 
+    <div class="col-md-12">
     <div class="form-group">
     <input type="submit" value="Upload" class=" submit btn btn-dark">
         

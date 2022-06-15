@@ -49,6 +49,12 @@
                                     <a class="nav-link" href="{{ route('aboutus') }}">{{ __('About-us') }}</a>
                                 </li>
                             @endif
+
+                        @if (Route::has('terms'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('terms') }}">{{ __('Terms & Conditions') }}</a>
+                            </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->

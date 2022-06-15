@@ -19,8 +19,20 @@
 
     <div class="col-md-12">
         <div class="form-group">
+<<<<<<< HEAD
             <input type="text" class="form-control" name="category" placeholder="Category">
         </div>
+=======
+        <select name="category" id="category" class="form-control">
+          <option selected>Category...</option>
+          <option>Keyboard</option>
+          <option>Mouse</option>
+          <option>Audio</option>
+          <option>Monitor</option>
+          <option>Others</option>
+        </select>
+      </div>
+>>>>>>> ae28fb445b050e929a4e72b6e9c9061076574a41
     </div>
     
     <div class="col-md-12">
@@ -31,26 +43,66 @@
 
     <div class="col-md-12">
         <div class="form-group">
+<<<<<<< HEAD
             <input type="text" class="form-control" name="quantity" placeholder="Quantity">
         </div>
+=======
+        <select name="quantity" id="quantity" class="form-control">
+          <option selected>Quantity...</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+>>>>>>> ae28fb445b050e929a4e72b6e9c9061076574a41
     </div>
     
+
     <div class="col-md-12">
         <div class="form-group">
+<<<<<<< HEAD
             <input type="text" class="form-control" name="country"  placeholder="Country">
+=======
+            <input type="text" class="form-control" name="contact" id="contact" placeholder="Contact">
+>>>>>>> ae28fb445b050e929a4e72b6e9c9061076574a41
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
+<<<<<<< HEAD
             <input type="text" class="form-control" name="city" placeholder="City">
         </div>
+=======
+        <select name="country" id="country" class="form-control">
+          <option selected>Country...</option>
+          <option>Indonesia</option>
+          <option>Singapore</option>
+          <option>Malaysia</option>
+        </select>
+      </div>
+>>>>>>> ae28fb445b050e929a4e72b6e9c9061076574a41
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
+<<<<<<< HEAD
             <input type="text" class="form-control" name="contact" placeholder="Contact">
         </div>
+=======
+        <select name="city" id="city" class="form-control">
+          <option selected>City...</option>
+          <option>Malang</option>
+          <option>Jakarta</option>
+          <option>Singapore</option>
+          <option>Bandung</option>
+          <option>Kuala Lumpur</option>
+          <option>Malacca</option>
+        </select>
+      </div>
+>>>>>>> ae28fb445b050e929a4e72b6e9c9061076574a41
     </div>
 
     <div class="col-md-12">
@@ -59,6 +111,7 @@
         </div>
     </div>
 
+    <div class="col-md-12">
     <div class="form-group">
     <input type="submit" value="Upload" class=" submit btn btn-dark">
         

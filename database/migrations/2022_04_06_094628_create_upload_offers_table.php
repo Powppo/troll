@@ -15,15 +15,15 @@ class CreateUploadOffersTable extends Migration
     {
         Schema::create('upload_offers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            // $table->unsignedBigInteger('user_id')->nullable();
+            // $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('category');
             $table->string('owner');
             $table->integer('quantity');
             $table->string('country');
             $table->string('city');
             $table->integer('contact');
-            $table->string('path_offer');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -16,6 +16,6 @@ class uploadOffer extends Model
         'country',
         'city',
         'contact',
-        'path_offers',
+        'image',
     ];
 }

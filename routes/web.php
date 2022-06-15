@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\offerController;
 use App\Http\Controllers\aboutUsController;
 use App\Http\Controllers\feedbackController;
-
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +25,14 @@ Route::get('/', function () {
 Auth::routes();
 
 /* -PAGES- */
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/offers', [App\Http\Controllers\offerController::class, 'index'])->name('offers');
 Route::get('/aboutus', [App\Http\Controllers\aboutUsController::class, 'index'])->name('aboutus');
 Route::get('/feedback', [App\Http\Controllers\feedbackController::class, 'index'])->name('feedback');
 Route::post('/feedbackx', [App\Http\Controllers\feedbackController::class, 'createFeedback'])->name('createFeedback');
 Route::get('/uploadOffers', [App\Http\Controllers\offerController::class, 'upload'])->name('upload');
 Route::post('/uploadOffersx', [App\Http\Controllers\offerController::class, 'storeOffer'])->name('upload_offer');
+// Route::resource('/uploadOffers', offerController::class);
 
 /* -OFFERS- */
 Route::get('/mouse', [App\Http\Controllers\offerController::class, 'mouse'])->name('mouse');

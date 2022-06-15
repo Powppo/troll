@@ -19,43 +19,43 @@
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="category" id="category" placeholder="Category">
+            <input type="text" class="form-control" name="category" placeholder="Category">
         </div>
     </div>
     
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="owner" id="owner" placeholder="Owner">
+            <input type="text" class="form-control" name="owner"  placeholder="Owner">
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Quantity">
+            <input type="text" class="form-control" name="quantity" placeholder="Quantity">
         </div>
     </div>
     
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="country" id="country" placeholder="Country">
+            <input type="text" class="form-control" name="country"  placeholder="Country">
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="city" id="city" placeholder="City">
+            <input type="text" class="form-control" name="city" placeholder="City">
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="contact" id="contact" placeholder="Contact">
+            <input type="text" class="form-control" name="contact" placeholder="Contact">
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="file" class="form-control" name="path_offer" id="path_offer" placeholder="path_offer">
+            <input type="file" name="image" id="" class="form-control">
         </div>
     </div>
 

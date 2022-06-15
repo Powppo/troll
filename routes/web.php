@@ -5,12 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\offerController;
 use App\Http\Controllers\aboutUsController;
 use App\Http\Controllers\feedbackController;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
-=======
-use App\Http\Controllers\CheckoutController;
-
->>>>>>> ae28fb445b050e929a4e72b6e9c9061076574a41
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +31,7 @@ Route::get('/aboutus', [App\Http\Controllers\aboutUsController::class, 'index'])
 Route::get('/feedback', [App\Http\Controllers\feedbackController::class, 'index'])->name('feedback');
 Route::post('/feedbackx', [App\Http\Controllers\feedbackController::class, 'createFeedback'])->name('createFeedback');
 Route::get('/uploadOffers', [App\Http\Controllers\offerController::class, 'upload'])->name('upload');
-Route::post('/uploadOffersx', [App\Http\Controllers\offerController::class, 'storeOffer'])->name('upload_offer');
+Route::post('/uploadOffers', [App\Http\Controllers\offerController::class, 'storeOffer'])->name('upload_offer');
 // Route::resource('/uploadOffers', offerController::class);
 
 /* -OFFERS- */
@@ -48,8 +43,3 @@ Route::get('/mouse2', [App\Http\Controllers\offerController::class, 'mouse2'])->
 Route::get('/earphone', [App\Http\Controllers\offerController::class, 'earphone'])->name('earphone');
 Route::get('/keyboard2', [App\Http\Controllers\offerController::class, 'keyboard2'])->name('keyboard2');
 Route::get('/headset2', [App\Http\Controllers\offerController::class, 'headset2'])->name('headset2');
-
-/* -CHECKOUT- */
-Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
-Route::post('/store', [App\Http\Controllers\CheckoutController::class, 'store'])->name('store');
-Route::get('/terms', [App\Http\Controllers\TermsController::class, 'terms'])->name('terms');

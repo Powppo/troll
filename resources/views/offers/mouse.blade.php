@@ -22,7 +22,10 @@
                     <h5>Country: Indonesia</h5>
                     <h5>City: Jakarta</h5>
                     <h5>Contact: 911321</h5>
+                    <a class="btn btn-dark btn-sm" href="{{ route('checkout') }}" role="button">Checkout</a>
                 </div>
+            </div>
+        </div>        
     </div>
 </body>
 @endsection

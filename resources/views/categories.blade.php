@@ -9,9 +9,9 @@
 
 <body>
     <div class="image-grid" >
-        <div class="title"><h2>Recent Item Offers</h2></div>
+        <div class="title"><h2>Upload Categories</h2></div>
         <div class="upload">
-            <h6>Click below to Upload Offer</h6>
+            <h6>Click below to Upload Categories</h6>
             <a class=" uploadbutton btn btn-dark btn-md" href="{{ route('uploadctg') }}" role="button"> Upload</a>
         </div>
         <hr class="my-4">

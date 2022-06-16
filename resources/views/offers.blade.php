@@ -84,8 +84,8 @@
                         <div class="card-footer d-flex justify-content-between bg-light border">
                             <a href="show/{{ $product->slug }}" class="btn btn-sm text-dark p-0">View
                                 Detail</a>
-                            <a href="" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                            <a href="{{ route('checkout') }}" class="btn btn-sm text-dark p-0"><i
+                                    class="fas fa-shopping-cart text-primary mr-1"></i>Checkout</a>
                         </div>
                     </div>
                 </div>

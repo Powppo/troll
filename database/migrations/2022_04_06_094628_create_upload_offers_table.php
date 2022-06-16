@@ -17,7 +17,9 @@ class CreateUploadOffersTable extends Migration
             $table->id();
             // $table->unsignedBigInteger('user_id')->nullable();
             // $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('category');
+            $table->string('category_id');
+            $table->string('item_name');
+            $table->string('slug');
             $table->string('owner');
             $table->integer('quantity');
             $table->string('country');

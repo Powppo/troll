@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\uploadOffer;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class offerController extends Controller
 {
@@ -30,7 +32,8 @@ class offerController extends Controller
 
     public function upload()
     {
-        return view('upload');
+        $categories = Category::all();
+        return view('upload', compact('categories'));
     }
 
 
@@ -52,7 +55,9 @@ class offerController extends Controller
         // $uploadOffer->city = $request->city;
         // $uploadOffer->contact = $request->contact;
         $validateData = $request ->validate([
-            'category' => 'required',
+            'category_id' => 'required',
+            'item_name' => 'required',
+            'slug' => 'required|unique:upload_offers',
             'owner' => 'required',
             'quantity' => 'required',
             'country' => 'required',
@@ -83,43 +88,55 @@ class offerController extends Controller
     }
     */
 
-    public function mouse()
+    public function show(uploadOffer $product)
     {
-        return view('offers.mouse');
+        return view('offers.itemDetail', [
+            'product' => $product
+        ]);
     }
 
-    public function keyboard()
-    {
-        return view('offers.keyboard');
+    public function checkSlug(Request $request){
+        $slug = SlugService::createSlug(uploadOffer::class, 'slug', $request->item_name);
+        return response()->json(['slug' => $slug]);
     }
 
-    public function monitor()
-    {
-        return view('offers.monitor');
-    }
+    // public function mouse()
+    // {
+    //     return view('offers.mouse');
+    // }
 
-    public function headset()
-    {
-        return view('offers.headset');
-    }
+    // public function keyboard()
+    // {
+    //     return view('offers.keyboard');
+    // }
 
-    public function headset2()
-    {
-        return view('offers.headset2');
-    }
+    // public function monitor()
+    // {
+    //     return view('offers.monitor');
+    // }
 
-    public function earphone()
-    {
-        return view('offers.earphone');
-    }
+    // public function headset()
+    // {
+    //     return view('offers.headset');
+    // }
+
+    // public function headset2()
+    // {
+    //     return view('offers.headset2');
+    // }
+
+    // public function earphone()
+    // {
+    //     return view('offers.earphone');
+    // }
     
-    public function mouse2()
-    {
-        return view('offers.mouse2');
-    }
+    // public function mouse2()
+    // {
+    //     return view('offers.mouse2');
+    // }
 
-    public function keyboard2()
-    {
-        return view('offers.keyboard2');
-    }
+    // public function keyboard2()
+    // {
+    //     return view('offers.keyboard2');
+    // }
 }

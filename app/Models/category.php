@@ -6,20 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class uploadOffer extends Model
+class category extends Model
 {
     use HasFactory, Sluggable;
-    protected $table = 'upload_offers';
+
     protected $fillable = [
-        'category_id',
-        'item_name',
+        'name',
         'slug',
-        'owner',
-        'quantity',
-        'country',
-        'city',
-        'contact',
-        'image',
     ];
 
     public function getRouteKeyName()
@@ -27,15 +20,15 @@ class uploadOffer extends Model
         return 'slug';
     }
 
-    public function category(){
-        return $this->belongsTo(Category::class);
+    public function product(){
+        return $this->hasMany(Product::class);
     }
 
     public function sluggable(): array
     {
         return [
             'slug' => [
-                'source' => 'item_name'
+                'source' => 'name'
             ]
         ];
     }

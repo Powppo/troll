@@ -38,6 +38,12 @@
                                 </li>
                             @endif
 
+                        @if (Route::has('category'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('category') }}">{{ __('Category') }}</a>
+                            </li>
+                            @endif
+
                         @if (Route::has('offers'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('offers') }}">{{ __('Offers') }}</a>

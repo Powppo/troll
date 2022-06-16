@@ -47,19 +47,36 @@
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="quantity" placeholder="Quantity">
+        <select name="subject" id="subject" class="form-control">
+          <option selected>Quantity</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
         </div>
     </div>
     
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="country"  placeholder="Country">
+        <select name="subject" id="subject" class="form-control">
+          <option selected>Contry</option>
+          <option>Indonesia</option>
+          <option>Malaysia</option>
+          <option>Singapore</option>
+        </select>
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
-            <input type="text" class="form-control" name="city" placeholder="City">
+        <select name="subject" id="subject" class="form-control">
+          <option selected>City</option>
+          <option>Jakarta</option>
+          <option>Surabaya</option>
+          <option>Malang</option>
+          <option>Singapore</option>
+          <option>Kuala Lumpur</option>
+        </select>
         </div>
     </div>
 

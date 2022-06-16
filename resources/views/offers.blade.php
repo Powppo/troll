@@ -81,7 +81,16 @@
                                     Item</a>
                             </div>
                         </div>
+<<<<<<< HEAD
                         
+=======
+                        <div class="card-footer d-flex justify-content-between bg-light border">
+                            <a href="show/{{ $product->slug }}" class="btn btn-sm text-dark p-0">View
+                                Detail</a>
+                            <a href="{{ route('checkout') }}" class="btn btn-sm text-dark p-0"><i
+                                    class="fas fa-shopping-cart text-primary mr-1"></i>Checkout</a>
+                        </div>
+>>>>>>> 545dbd17215830a1f03e901a93cb48c6162b7bd7
                     </div>
                 </div>
                 @endforeach

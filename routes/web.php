@@ -42,7 +42,7 @@ Route::post('/uploadOffers', [App\Http\Controllers\offerController::class, 'stor
 // Route::get('/offers/itemDetail/checkSlug', [App\Http\Controllers\offerController::class, 'checkSlug']);
 // Route::get('/item/show', [App\Http\Controllers\offerController::class, 'show']);
 // Route::get('/itemDetail/{product:slug}', 'show', [App\Http\Controllers\offerController::class]);
-Route::resource('/item/show', App\Http\Controllers\offerController::class);
+Route::resource('/show', App\Http\Controllers\offerController::class);
 
 /* -OFFERS- */
 Route::get('/mouse', [App\Http\Controllers\offerController::class, 'mouse'])->name('mouse');

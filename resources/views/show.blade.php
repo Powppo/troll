@@ -12,16 +12,20 @@
         <div class="container-lg">
             <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4">              
                 <div class="col">
-                    <img src="images/earphone.jpg" alt="earphone">
-                    <h4>Razer Hammerhead Pro V2</h4>
+                    {{-- <img src="images/earphone.jpg" alt="earphone"> --}}
+                    <h4>{{ $product->item_name }}</h4>
                 </div>
                 <div class="content">
-                    <h5>Category: Earphone-Electronics</h5>
-                    <h5>Owned By: Papa</h5>
-                    <h5>Quantity: 1</h5>
-                    <h5>Country: Indonesia</h5>
-                    <h5>City: Jakarta</h5>
-                    <h5>Contact: 911382</h5>
+                        <h6 class="my-1">Category Product</h6>
+                        <p>{{ $product->item_name }}</p>
+                        <h6 class="my-1">Tag Product</h6>
+                        <h6 class="my-1">Product Quantity</h6>
+                        <p>{{ $product->quantity }}</p>
+                        <h6 class="my-1">Product Price</h6>
+                        <p>Rp. {{ $product->price }}</p>
+                        <h6 class="my-1">Product Description</h6>
+                        <p>{{ $product->description }}</p>
+                    </div>
                 </div>
     </div>
 </body>

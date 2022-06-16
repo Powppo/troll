@@ -80,17 +80,15 @@ class offerController extends Controller
     }
 
 
-    /*
-    public function showOffer()
-    {
-        $data = uploadOffer::all();
-        return view('offers.mouse', ['uploadOffer'=>$data]);
-    }
-    */
-
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\uploadOffer  $Product
+     * @return \Illuminate\Http\Response
+     */
     public function show(uploadOffer $product)
     {
-        return view('item.show', [
+        return view('show', [
             'product' => $product
         ]);
     }

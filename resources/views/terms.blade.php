@@ -11,10 +11,7 @@
     <div class="image-grid" >
         <div class="title"><h1>Terms & Conditions</h1></div>
         <hr class="my-4">
-        <div class="content"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3></div>
+        <div class="content"><h3>Welcome to Troll, these terms and conditions outline the result for the use of Troll Website. By Check Marking this website assume you accept these terms and conditions which are include Full and legal names of both parties, Effective agreement date, and also Details surrounding the goods or services involved in the barter agreement.</h3></div>
             
         <div class="policy"><h5>Policy</h5></div>
         <div class="pcontent"><h5>Every miscommunications are borne by yourself. TROLL only provide place for you to barter and offer things. Thank you</h5></div>

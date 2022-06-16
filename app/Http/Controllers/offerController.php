@@ -90,7 +90,7 @@ class offerController extends Controller
 
     public function show(uploadOffer $product)
     {
-        return view('offers.itemDetail', [
+        return view('item.show', [
             'product' => $product
         ]);
     }

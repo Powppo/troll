@@ -33,14 +33,16 @@ Route::get('/feedback', [App\Http\Controllers\feedbackController::class, 'index'
 Route::post('/feedbackx', [App\Http\Controllers\feedbackController::class, 'createFeedback'])->name('createFeedback');
 
 
-Route::get('/categoryUpload', [App\Http\Controllers\CategoryController::class, 'upload'])->name('upload');
+Route::get('/categoryUpload', [App\Http\Controllers\CategoryController::class, 'uploadctg'])->name('uploadctg');
 Route::post('/categoryUpload', [App\Http\Controllers\CategoryController::class, 'store'])->name('upload_ctg');
 
 
 Route::get('/uploadOffers', [App\Http\Controllers\offerController::class, 'upload'])->name('upload');
 Route::post('/uploadOffers', [App\Http\Controllers\offerController::class, 'storeOffer'])->name('upload_offer');
+// Route::get('/offers/itemDetail/checkSlug', [App\Http\Controllers\offerController::class, 'checkSlug']);
+// Route::get('/item/show', [App\Http\Controllers\offerController::class, 'show']);
 // Route::get('/itemDetail/{product:slug}', 'show', [App\Http\Controllers\offerController::class]);
-// Route::resource('/uploadOffers', offerController::class);
+Route::resource('/item/show', App\Http\Controllers\offerController::class);
 
 /* -OFFERS- */
 Route::get('/mouse', [App\Http\Controllers\offerController::class, 'mouse'])->name('mouse');

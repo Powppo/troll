@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="/offers/itemDetail/{{ $product->slug }}" class="btn btn-sm text-dark p-0"><i
+                            <a href="item/{{ $product->slug }}" class="btn btn-sm text-dark p-0"><i
                                     class="fas fa-eye text-primary mr-1"></i>View
                                 Detail</a>
                             <a href="" class="btn btn-sm text-dark p-0"><i

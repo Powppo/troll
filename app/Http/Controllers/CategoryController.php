@@ -25,9 +25,8 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function upload()
+    public function uploadctg()
     {
-       
         return view('categoryUpload');
     }
 

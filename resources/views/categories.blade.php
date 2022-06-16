@@ -12,7 +12,7 @@
         <div class="title"><h2>Recent Item Offers</h2></div>
         <div class="upload">
             <h6>Click below to Upload Offer</h6>
-            <a class=" uploadbutton btn btn-dark btn-md" href="{{ route('upload') }}" role="button"> Upload</a>
+            <a class=" uploadbutton btn btn-dark btn-md" href="{{ route('uploadctg') }}" role="button"> Upload</a>
         </div>
         <hr class="my-4">
         <div class="container-lg">

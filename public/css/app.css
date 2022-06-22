@@ -87,11 +87,10 @@ body {
 }
 
 hr {
-  margin: 1rem 0;
-  color: inherit;
-  background-color: currentColor;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 0;
-  opacity: 0.25;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 hr:not([size]) {

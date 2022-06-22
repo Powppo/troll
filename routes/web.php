@@ -25,7 +25,7 @@ Route::get('/', function () {
 Auth::routes();
 
 /* -PAGES- */
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/offers', [App\Http\Controllers\offerController::class, 'index'])->name('offers');
 Route::get('/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 Route::get('/aboutus', [App\Http\Controllers\aboutUsController::class, 'index'])->name('aboutus');
@@ -44,8 +44,9 @@ Route::post('/uploadOffers', [App\Http\Controllers\offerController::class, 'stor
 // Route::get('/itemDetail/{product:slug}', 'show', [App\Http\Controllers\offerController::class]);
 // Route::get('/show', [App\Http\Controllers\offerController::class, 'show']);
 Route::get('/show/{product:slug}', [App\Http\Controllers\offerController::class, 'show']);
+Route::get('/checkout/{product:slug}', [App\Http\Controllers\offerController::class, 'co']);
 
 /* CO */
-Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
+// Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
 Route::post('/store', [App\Http\Controllers\CheckoutController::class, 'store'])->name('store');
 Route::get('/terms', [App\Http\Controllers\TermsController::class, 'terms'])->name('terms');

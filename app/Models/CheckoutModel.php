@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\PaymentModel;
-use App\Models\ShipmentModel;
 
 class CheckoutModel extends Model
 {
@@ -23,4 +22,26 @@ class CheckoutModel extends Model
     {
         return $this->belongsTo(PaymentModel::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public function uploadoffer(){
+        return $this->hasMany(UploadOffer::class);
+    }
+    
+    public function category(){
+        return $this->belongsTo(category::class);
+    }
+
+    // public function sluggable(): array
+    // {
+    //     return [
+    //         'slug' => [
+    //             'source' => 'item_name'
+    //         ]
+    //     ];
+    // }
 }

@@ -35,13 +35,4 @@ class CheckoutModel extends Model
     public function category(){
         return $this->belongsTo(category::class);
     }
-
-    // public function sluggable(): array
-    // {
-    //     return [
-    //         'slug' => [
-    //             'source' => 'item_name'
-    //         ]
-    //     ];
-    // }
 }

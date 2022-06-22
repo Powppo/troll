@@ -11,7 +11,7 @@ class CheckoutController extends Controller
 {
     public function index()
     {
-        $checkout = CheckoutModel::with('payment', 'shipment')->get();
+        $checkout = CheckoutModel::with('payment')->get();
         return view('checkout', ['checkout' => $checkout]);
     }
 

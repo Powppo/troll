@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\uploadOffer;
 use App\Models\category;
 use App\Models\CheckoutModel;
+use App\Models\PaymentModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -85,11 +86,12 @@ class offerController extends Controller
 
     public function co(uploadOffer $product)
     {
-        $checkout = CheckoutModel::with('payment', 'shipment')->get();
+        $checkout = CheckoutModel::with('payment',)->get();
         // $product = uploadOffer::with('category')->where('id', $product);
         return view('checkout', [
             'product' => $product,
             'checkout' => $checkout,
+             'payment' => PaymentModel::all(),
         ]);
     }
 

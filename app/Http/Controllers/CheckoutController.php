@@ -18,7 +18,7 @@ class CheckoutController extends Controller
     public function checkout()
     {
         $payment = PaymentModel::all();
-        return view('checkout.checkout', ['payment' => $payment]);
+        return view('checkout', ['payment' => $payment]);
     }
 
     public function store(Request $request)

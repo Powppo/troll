@@ -72,7 +72,7 @@ class offerController extends Controller
             // $filename = time().'.'.$extention;
             // $file->move('public/images/', $filename);
             // $uploadOffer->path_offer = $filename;
-            $validateData['image'] = $request->file('image')->store('image');
+            $validateData['image'] = $request->file('image')->store('image','public');
         }
 
         uploadOffer::create($validateData);
@@ -89,7 +89,8 @@ class offerController extends Controller
     public function show(uploadOffer $product)
     {
         return view('show', [
-            'product' => $product
+            'product' => $product,
+            'categories' => Category::all()
         ]);
     }
 

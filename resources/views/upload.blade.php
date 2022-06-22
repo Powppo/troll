@@ -47,35 +47,35 @@
 
     <div class="col-md-12">
         <div class="form-group">
-        <select name="subject" id="subject" class="form-control">
-          <option selected>Quantity</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+        <select name="quantity" id="quantity" class="form-control">
+          <option>Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
         </select>
         </div>
     </div>
     
     <div class="col-md-12">
         <div class="form-group">
-        <select name="subject" id="subject" class="form-control">
+        <select name="country" id="country" class="form-control">
           <option selected>Contry</option>
-          <option>Indonesia</option>
-          <option>Malaysia</option>
-          <option>Singapore</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Singapore">Singapore</option>
         </select>
         </div>
     </div>
 
     <div class="col-md-12">
         <div class="form-group">
-        <select name="subject" id="subject" class="form-control">
+        <select name="city" id="city" class="form-control">
           <option selected>City</option>
-          <option>Jakarta</option>
-          <option>Surabaya</option>
-          <option>Malang</option>
-          <option>Singapore</option>
-          <option>Kuala Lumpur</option>
+          <option value="Jakarta" >Jakarta</option>
+          <option value="Surabaya">Surabaya</option>
+          <option value="Malang">Malang</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Kuala Lumpur">Kuala Lumpur</option>
         </select>
         </div>
     </div>

@@ -17,14 +17,13 @@
                 </div>
                 <div class="content">
                         <h6 class="my-1">Category Product</h6>
-                        <p>{{ $product->item_name }}</p>
-                        <h6 class="my-1">Tag Product</h6>
+                        <p>{{ $product->category->name ?? 'None'}}</p> 
                         <h6 class="my-1">Product Quantity</h6>
                         <p>{{ $product->quantity }}</p>
-                        <h6 class="my-1">Product Price</h6>
-                        <p>Rp. {{ $product->price }}</p>
-                        <h6 class="my-1">Product Description</h6>
-                        <p>{{ $product->description }}</p>
+                        <h6 class="my-1">Product Owner</h6>
+                        <p>{{ $product->owner }}</p>
+                        <h6 class="my-1">Owner Contact</h6>
+                        <p>{{ $product->contact }}</p>
                     </div>
                 </div>
     </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\uploadOffer;
-use App\Models\Category;
+use App\Models\category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -46,14 +46,6 @@ class offerController extends Controller
 
     public function storeOffer(Request $request)
     {
-
-        // $uploadOffer = new uploadOffer;
-        // $uploadOffer->category = $request->category;
-        // $uploadOffer->owner = $request->owner;
-        // $uploadOffer->quantity = $request->quantity;
-        // $uploadOffer->country = $request->country;
-        // $uploadOffer->city = $request->city;
-        // $uploadOffer->contact = $request->contact;
         $validateData = $request ->validate([
             'category_id' => 'required',
             'item_name' => 'required',
@@ -67,12 +59,7 @@ class offerController extends Controller
         ]);
         if ($request->file('image'))
         {
-            // $file = $request->file('path_offer');
-            // $extention = $file->getClientOriginalExtension();
-            // $filename = time().'.'.$extention;
-            // $file->move('public/images/', $filename);
-            // $uploadOffer->path_offer = $filename;
-            $validateData['image'] = $request->file('image')->store('image','public');
+            $validateData['image'] = $request->file('image')->store('product');
         }
 
         uploadOffer::create($validateData);
@@ -88,9 +75,10 @@ class offerController extends Controller
      */
     public function show(uploadOffer $product)
     {
+        // $product = uploadOffer::with('category')->where('id', $product);
         return view('show', [
             'product' => $product,
-            'categories' => Category::all()
+            'categories' => category::all()
         ]);
     }
 
@@ -99,43 +87,4 @@ class offerController extends Controller
         return response()->json(['slug' => $slug]);
     }
 
-    // public function mouse()
-    // {
-    //     return view('offers.mouse');
-    // }
-
-    // public function keyboard()
-    // {
-    //     return view('offers.keyboard');
-    // }
-
-    // public function monitor()
-    // {
-    //     return view('offers.monitor');
-    // }
-
-    // public function headset()
-    // {
-    //     return view('offers.headset');
-    // }
-
-    // public function headset2()
-    // {
-    //     return view('offers.headset2');
-    // }
-
-    // public function earphone()
-    // {
-    //     return view('offers.earphone');
-    // }
-    
-    // public function mouse2()
-    // {
-    //     return view('offers.mouse2');
-    // }
-
-    // public function keyboard2()
-    // {
-    //     return view('offers.keyboard2');
-    // }
 }

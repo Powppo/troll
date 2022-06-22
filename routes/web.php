@@ -42,17 +42,8 @@ Route::post('/uploadOffers', [App\Http\Controllers\offerController::class, 'stor
 // Route::get('/offers/itemDetail/checkSlug', [App\Http\Controllers\offerController::class, 'checkSlug']);
 // Route::get('/item/show', [App\Http\Controllers\offerController::class, 'show']);
 // Route::get('/itemDetail/{product:slug}', 'show', [App\Http\Controllers\offerController::class]);
-Route::resource('/show', App\Http\Controllers\offerController::class);
-
-/* -OFFERS- */
-Route::get('/mouse', [App\Http\Controllers\offerController::class, 'mouse'])->name('mouse');
-Route::get('/keyboard', [App\Http\Controllers\offerController::class, 'keyboard'])->name('keyboard');
-Route::get('/monitor', [App\Http\Controllers\offerController::class, 'monitor'])->name('monitor');
-Route::get('/headset', [App\Http\Controllers\offerController::class, 'headset'])->name('headset');
-Route::get('/mouse2', [App\Http\Controllers\offerController::class, 'mouse2'])->name('mouse2');
-Route::get('/earphone', [App\Http\Controllers\offerController::class, 'earphone'])->name('earphone');
-Route::get('/keyboard2', [App\Http\Controllers\offerController::class, 'keyboard2'])->name('keyboard2');
-Route::get('/headset2', [App\Http\Controllers\offerController::class, 'headset2'])->name('headset2');
+// Route::get('/show', [App\Http\Controllers\offerController::class, 'show']);
+Route::get('/show/{product:slug}', [App\Http\Controllers\offerController::class, 'show']);
 
 /* CO */
 Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');

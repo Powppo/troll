@@ -20,8 +20,8 @@ class category extends Model
         return 'slug';
     }
 
-    public function product(){
-        return $this->hasMany(Product::class);
+    public function uploadoffer(){
+        return $this->hasMany(UploadOffer::class);
     }
 
     public function sluggable(): array

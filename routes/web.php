@@ -25,7 +25,7 @@ Route::get('/', function () {
 Auth::routes();
 
 /* -PAGES- */
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/offers', [App\Http\Controllers\offerController::class, 'index'])->name('offers');
 Route::get('/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 Route::get('/aboutus', [App\Http\Controllers\aboutUsController::class, 'index'])->name('aboutus');

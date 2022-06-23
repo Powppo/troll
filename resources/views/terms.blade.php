@@ -11,8 +11,11 @@
     <div class="image-grid" >
         <div class="title"><h1>Terms & Conditions</h1></div>
         <hr class="my-4">
-        <div class="content"><h3>Welcome to Troll, these terms and conditions outline the result for the use of Troll Website. By Check Marking this website assume you accept these terms and conditions which are include Full and legal names of both parties, Effective agreement date, and also Details surrounding the goods or services involved in the barter agreement.</h3></div>
-            
+        <div class="content"><h3>- By this Agreement, both Parties agree to the trade process done by themself.</h3></div>
+        <div class="content"><h3>- By this Agreement, both Parties attest that they are freely entering into this agreement.</h3></div>
+        <div class="content"><h3>- By this Agreement, both Parties agree to abide by delivery schedule and deliver their items products and services in a good condition.</h3></div>
+         
+
         <div class="policy"><h5>Policy</h5></div>
         <div class="pcontent"><h5>Every miscommunications are borne by yourself. TROLL only provide place for you to barter and offer things. Thank you</h5></div>
     </div>

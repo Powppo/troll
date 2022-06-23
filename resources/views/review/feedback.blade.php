@@ -24,7 +24,8 @@
     <div class="col-md-12">
         <div class="form-group">
         <select name="subject" id="subject" class="form-control">
-          <option selected>Critics</option>
+          <option selected>Type..</option>
+          <option>Critics</option>
           <option>Advice</option>
           <option>Support</option>
         </select>

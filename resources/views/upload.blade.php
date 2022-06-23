@@ -50,7 +50,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <select name="quantity" id="quantity" class="form-control">
-                                <option>Quantity</option>
+                                <option>Quantity..</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -61,7 +61,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <select name="country" id="country" class="form-control">
-                                <option selected>Country</option>
+                                <option selected>Country..</option>
                                 <option value="Indonesia">Indonesia</option>
                                 <option value="Malaysia">Malaysia</option>
                                 <option value="Singapore">Singapore</option>
@@ -72,7 +72,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <select name="city" id="city" class="form-control">
-                                <option selected>City</option>
+                                <option selected>City..</option>
                                 <option value="Jakarta">Jakarta</option>
                                 <option value="Surabaya">Surabaya</option>
                                 <option value="Malang">Malang</option>

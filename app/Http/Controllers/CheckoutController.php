@@ -33,7 +33,7 @@ class CheckoutController extends Controller
         $checkout->payment()->associate($payment);*/
         $checkout->save();
 
-        return redirect()->route('checkout')
+        return redirect()->route('home')
             ->with('success', 'Transaction Success');
     }
 }

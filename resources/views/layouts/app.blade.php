@@ -56,11 +56,11 @@
                                 </li>
                             @endif
 
-                        @if (Route::has('terms'))
+                        {{-- @if (Route::has('terms'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('terms') }}">{{ __('Terms & Conditions') }}</a>
                             </li>
-                        @endif
+                        @endif --}}
                     </ul>
 
                     <!-- Right Side Of Navbar -->

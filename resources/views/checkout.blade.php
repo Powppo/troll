@@ -26,8 +26,8 @@
                     <h5>Category: {{ $product->category->name ?? 'None' }}</h5>
                     <h5>Owned By: {{ $product->owner }}</h5>
                     <h5>Quantity: {{ $product->quantity }}</h5>
-                    <h5>Country: {{ $product->country }}</h5>
-                    <h5>City: {{ $product->city }}</h5>
+                    <h5>Country: {{ $product->country->countryname ?? 'None' }}</h5>
+                    <h5>City: {{ $product->city->cityname ?? 'None' }}</h5>
                     <h5>Contact: {{ $product->contact }}</h5>
                 </div>
                 </div>

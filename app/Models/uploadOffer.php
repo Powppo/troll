@@ -31,6 +31,14 @@ class uploadOffer extends Model
         return $this->belongsTo(category::class);
     }
 
+    public function country(){
+        return $this->belongsTo(countryModel::class);
+    }
+
+    public function city(){
+        return $this->belongsTo(CityModel::class);
+    }
+
     public function sluggable(): array
     {
         return [

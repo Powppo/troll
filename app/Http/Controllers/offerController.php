@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\uploadOffer;
 use App\Models\category;
 use App\Models\CheckoutModel;
+use App\Models\CityModel;
 use App\Models\countryModel;
 use App\Models\PaymentModel;
 use Illuminate\Http\Request;
@@ -36,8 +37,8 @@ class offerController extends Controller
 
     public function upload()
     {
-        $city = countryModel::all();
         $country = countryModel::all();
+        $city = cityModel::all();
         $categories = Category::all();
         $user = auth()->user();
         return view('upload', compact('categories', 'country', 'city', 'user'));
@@ -85,18 +86,21 @@ class offerController extends Controller
         // $product = uploadOffer::with('category')->where('id', $product);
         return view('show', [
             'product' => $product,
-            'categories' => category::all()
+            'categories' => category::all(),
+            'country' => countryModel::all()
         ]);
     }
 
     public function co(uploadOffer $product)
     {
         $checkout = CheckoutModel::with('payment',)->get();
+       
+        // $product = uploadOffer::with('countryModel')->get();
         // $product = uploadOffer::with('category')->where('id', $product);
         return view('checkout', [
             'product' => $product,
             'checkout' => $checkout,
-             'payment' => PaymentModel::all(),
+            'payment' => PaymentModel::all(),
         ]);
     }
 

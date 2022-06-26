@@ -35,4 +35,8 @@ class CheckoutModel extends Model
     public function category(){
         return $this->belongsTo(category::class);
     }
+
+    public function country(){
+        return $this->belongsTo(countryModel::class);
+    }
 }

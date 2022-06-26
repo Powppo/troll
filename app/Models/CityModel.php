@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class countryModel extends Model
+class CityModel extends Model
 {
     use HasFactory;
-    protected $table='country';
+    protected $table='city';
     protected $fillable = [
-        'countryname',
+        'cityname',
         'slug',
     ];
 
@@ -27,7 +27,7 @@ class countryModel extends Model
     {
         return [
             'slug' => [
-                'source' => 'countryname'
+                'source' => 'cityname'
             ]
         ];
     }

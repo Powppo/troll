@@ -15,6 +15,7 @@ class uploadOffer extends Model
         'item_name',
         'slug',
         'owner',
+        'user_id',
         'quantity',
         'country_id',
         'city_id',

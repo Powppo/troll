@@ -59,9 +59,10 @@ class offerController extends Controller
             'item_name' => 'required',
             'slug' => 'required|unique:upload_offers',
             'owner' => 'required',
+            'user_id' => 'required',
             'quantity' => 'required',
-            'country' => 'required',
-            'city' => 'required',
+            'country_id' => 'required',
+            'city_id' => 'required',
             'contact' => 'required',
             'image' => 'image|file|max:1024',
         ]);

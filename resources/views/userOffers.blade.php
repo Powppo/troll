@@ -11,7 +11,7 @@
     <body>
         <div class="image-grid">
             <div class="title">
-                <h2>Recent Item Offers</h2>
+                <h2>My Item Offers</h2>
             </div>
             <div class="upload">
                 <h6>Click below to Upload Offer</h6>

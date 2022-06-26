@@ -49,13 +49,19 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
+                            <input type="text" class="form-control" name="user_id" value="{{ $user->id }}">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
                             <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <select name="country" id="country" class="form-control">
+                            <select name="country_id" id="country_id" class="form-control">
                                 @foreach($country as $country)
                                 <option value={{ $country->id }}>{{ $country->countryname }}</option>
                                 @endforeach
@@ -65,7 +71,7 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <select name="city" id="city" class="form-control">
+                            <select name="city_id" id="city_id" class="form-control">
                                 @foreach($city as $country)
                                 <option value={{ $country->id }}>{{ $country->cityname }}</option>
                                 @endforeach

@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Facades\Auth;
 
 class UserOfferController extends Controller
 {
@@ -25,7 +26,7 @@ class UserOfferController extends Controller
     {
         $country = countryModel::all();
         $upload_offers = uploadOffer::all();
-        return view('offers', compact('upload_offers'));
+        return view('userOffers', compact('upload_offers'));
     }
 
     /**
@@ -58,9 +59,10 @@ class UserOfferController extends Controller
             'item_name' => 'required',
             'slug' => 'required|unique:upload_offers',
             'owner' => 'required',
+            'user_id' => 'required',
             'quantity' => 'required',
-            'country' => 'required',
-            'city' => 'required',
+            'country_id' => 'required',
+            'city_id' => 'required',
             'contact' => 'required',
             'image' => 'image|file|max:1024',
         ]);
@@ -71,6 +73,19 @@ class UserOfferController extends Controller
 
         uploadOffer::create($validateData);
         return redirect()->back()->with('status','Offer Added' );
+    }
+
+    public function showuseroffer(){
+        if (Auth::id()) {
+            // $products = Product::latest()->filter(request(['search', 'category', 'tag']))->paginate('12');
+            // $categories = Category::withCount('product')->get();
+            $user = auth()->user();
+            $offerItem = uploadOffer::where('user_id', $user->id)->sum('quantity');
+            $offerItems = uploadOffer::where('user_id', Auth::id())->get();
+            return view('userShow', compact('products', 'categories', 'cartItem', 'cartItems'));
+        } else {
+            return redirect('login');
+        }
     }
 
 }

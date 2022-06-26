@@ -13,10 +13,10 @@
             <div class="title">
                 <h2>Recent Item Offers</h2>
             </div>
-            <div class="upload">
+            {{-- <div class="upload">
                 <h6>Click below to Upload Offer</h6>
                 <a class=" uploadbutton btn btn-dark btn-md" href="{{ route('upload') }}" role="button"> Upload</a>
-            </div>
+            </div> --}}
             <hr class="my-4">
             <div class="container-lg">
                 <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4">

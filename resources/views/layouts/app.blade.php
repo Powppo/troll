@@ -49,6 +49,12 @@
                                 <a class="nav-link" href="{{ route('offers') }}">{{ __('Offers') }}</a>
                             </li>
                             @endif
+                            
+                        @if (Route::has('userOffers'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('userOffers') }}">{{ __('userOffers') }}</a>
+                            </li>
+                            @endif
 
                         @if (Route::has('aboutus'))
                                 <li class="nav-item">

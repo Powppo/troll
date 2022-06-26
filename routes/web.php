@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\offerController;
 use App\Http\Controllers\aboutUsController;
 use App\Http\Controllers\feedbackController;
+use App\Http\Controllers\UserOfferController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -27,6 +28,7 @@ Auth::routes();
 /* -PAGES- */
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/offers', [App\Http\Controllers\offerController::class, 'index'])->name('offers');
+Route::get('/userOffers', [App\Http\Controllers\UserOfferController::class, 'index'])->name('userOffers');
 Route::get('/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 Route::get('/aboutus', [App\Http\Controllers\aboutUsController::class, 'index'])->name('aboutus');
 Route::get('/feedback', [App\Http\Controllers\feedbackController::class, 'index'])->name('feedback');
@@ -36,15 +38,14 @@ Route::post('/feedbackx', [App\Http\Controllers\feedbackController::class, 'crea
 Route::get('/categoryUpload', [App\Http\Controllers\CategoryController::class, 'uploadctg'])->name('uploadctg');
 Route::post('/categoryUpload', [App\Http\Controllers\CategoryController::class, 'store'])->name('upload_ctg');
 
-
+/* Market Offer */
 Route::get('/uploadOffers', [App\Http\Controllers\offerController::class, 'upload'])->name('upload');
 Route::post('/uploadOffers', [App\Http\Controllers\offerController::class, 'storeOffer'])->name('upload_offer');
-// Route::get('/offers/itemDetail/checkSlug', [App\Http\Controllers\offerController::class, 'checkSlug']);
-// Route::get('/item/show', [App\Http\Controllers\offerController::class, 'show']);
-// Route::get('/itemDetail/{product:slug}', 'show', [App\Http\Controllers\offerController::class]);
-// Route::get('/show', [App\Http\Controllers\offerController::class, 'show']);
 Route::get('/show/{product:slug}', [App\Http\Controllers\offerController::class, 'show']);
 Route::get('/checkout/{product:slug}', [App\Http\Controllers\offerController::class, 'co']);
+
+/* User Offer */
+
 
 /* CO */
 // Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');

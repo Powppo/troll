@@ -19,9 +19,11 @@
                             <h4>{{ $product->item_name }}</h4>
                         </b>
                     </div>
-                    <div class="content">
+                    <div class="content">               
                         <h5 class="my-1">Category Product</h5>
                         <p>{{ $product->category->name ?? 'None' }}</p>
+                        <h5 class="my-1">Country</h5>
+                        <p>{{ $product->country->countryname ?? 'None' }}</p>
                         <h5 class="my-1">Product Quantity</h5>
                         <p>{{ $product->quantity }}</p>
                         <h5 class="my-1">Product Owner</h5>

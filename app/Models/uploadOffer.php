@@ -16,8 +16,8 @@ class uploadOffer extends Model
         'slug',
         'owner',
         'quantity',
-        'country',
-        'city',
+        'country_id',
+        'city_id',
         'contact',
         'image',
     ];

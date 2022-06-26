@@ -93,12 +93,14 @@ class offerController extends Controller
 
     public function co(uploadOffer $product)
     {
+        $city = cityModel::all();
         $checkout = CheckoutModel::with('payment',)->get();
        
         // $product = uploadOffer::with('countryModel')->get();
         // $product = uploadOffer::with('category')->where('id', $product);
         return view('checkout', [
             'product' => $product,
+            'city' => cityModel::all(),
             'checkout' => $checkout,
             'payment' => PaymentModel::all(),
         ]);

@@ -22,8 +22,8 @@ class CreateUploadOffersTable extends Migration
             $table->string('slug');
             $table->string('owner');
             $table->integer('quantity');
-            $table->string('country');
-            $table->string('city');
+            $table->string('country_id');
+            $table->string('city_id');
             $table->integer('contact');
             $table->string('image');
             $table->timestamps();

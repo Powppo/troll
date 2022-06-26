@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class countryModel extends Model
 {
-    use HasFactory;
+    use HasFactory, sluggable;
     protected $table='country';
     protected $fillable = [
         'countryname',

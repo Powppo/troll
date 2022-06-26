@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\uploadOffer;
 use App\Models\category;
 use App\Models\CheckoutModel;
+use App\Models\countryModel;
 use App\Models\PaymentModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -22,6 +23,7 @@ class offerController extends Controller
 
     public function index()
     {
+        $country = countryModel::all();
         $upload_offers = uploadOffer::all();
         return view('offers', compact('upload_offers'));
     }
@@ -34,8 +36,11 @@ class offerController extends Controller
 
     public function upload()
     {
+        $city = countryModel::all();
+        $country = countryModel::all();
         $categories = Category::all();
-        return view('upload', compact('categories'));
+        $user = auth()->user();
+        return view('upload', compact('categories', 'country', 'city', 'user'));
     }
 
 

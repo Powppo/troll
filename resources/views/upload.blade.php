@@ -43,28 +43,22 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="owner" placeholder="Owner">
+                            <input type="text" class="form-control" name="owner" value="{{ $user->name }}">
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <select name="quantity" id="quantity" class="form-control">
-                                <option>Quantity..</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <select name="country" id="country" class="form-control">
-                                <option selected>Country..</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Singapore">Singapore</option>
+                                @foreach($country as $country)
+                                <option value={{ $country->id }}>{{ $country->countryname }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -72,12 +66,9 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <select name="city" id="city" class="form-control">
-                                <option selected>City..</option>
-                                <option value="Jakarta">Jakarta</option>
-                                <option value="Surabaya">Surabaya</option>
-                                <option value="Malang">Malang</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                @foreach($city as $country)
+                                <option value={{ $country->id }}>{{ $country->cityname }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

@@ -13,8 +13,10 @@ class CreateCountryModel extends Migration
      */
     public function up()
     {
-        Schema::create('country_model', function (Blueprint $table) {
+        Schema::create('country', function (Blueprint $table) {
             $table->id();
+            $table->string('countryname');
+            $table->string('cityname');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateCountryModel extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('country_model');
+        Schema::dropIfExists('country');
     }
 }

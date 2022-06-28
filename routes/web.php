@@ -28,7 +28,7 @@ Auth::routes();
 /* -PAGES- */
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/offers', [App\Http\Controllers\offerController::class, 'index'])->name('offers');
-Route::get('/userOffers', [App\Http\Controllers\UserOfferController::class, 'index'])->name('userOffers');
+Route::get('/userOffers', [App\Http\Controllers\UserOfferController::class, 'showuseroffer'])->name('userOffers');
 Route::get('/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('category');
 Route::get('/aboutus', [App\Http\Controllers\aboutUsController::class, 'index'])->name('aboutus');
 Route::get('/feedback', [App\Http\Controllers\feedbackController::class, 'index'])->name('feedback');

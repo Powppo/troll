@@ -7,7 +7,7 @@ use App\Models\category;
 use App\Models\CheckoutModel;
 use App\Models\CityModel;
 use App\Models\countryModel;
-use App\Models\PaymentModel;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -68,7 +68,7 @@ class UserOfferController extends Controller
         ]);
         if ($request->file('image'))
         {
-            $validateData['image'] = $request->file('image')->store('product');
+            $validateData['image'] = $request->file('image')->store('product', 'public');
         }
 
         uploadOffer::create($validateData);
@@ -77,12 +77,9 @@ class UserOfferController extends Controller
 
     public function showuseroffer(){
         if (Auth::id()) {
-            // $products = Product::latest()->filter(request(['search', 'category', 'tag']))->paginate('12');
-            // $categories = Category::withCount('product')->get();
-            $user = auth()->user();
-            $offerItem = uploadOffer::where('user_id', $user->id)->sum('quantity');
-            $offerItems = uploadOffer::where('user_id', Auth::id())->get();
-            return view('userShow', compact('products', 'categories', 'cartItem', 'cartItems'));
+            $id = User::find(Auth::id());
+            $upload_offers = uploadOffer::where('user_id', Auth::id())->get();
+            return view('userOffers', compact('upload_offers'));
         } else {
             return redirect('login');
         }

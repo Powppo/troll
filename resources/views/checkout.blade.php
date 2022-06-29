@@ -36,15 +36,19 @@
             <div class="card">
             <div class="card-header">{{ __('Checkout') }}</div>
                 <div class="card-body">
-                    <form action="{{ route('replicate') }}" method="POST">
+                    <form action="{{ route('updateOffer') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label for="">Payment</label>
-                            <select name="payment" class="form-control">
-                                @foreach($upload_offers as $pym)
-                                    <option value="{{$pym->id}}">{{$pym->item_name}}</option>
-                                @endforeach
-                            </select>
+                            <label for="owner">Owner</label>
+                            <input type="text" name="owner" class="form-control" id="owner" value="{{ $product->owner }}" ariadescribedby="owner" >
+                        </div>
+                        <div class="form-group">
+                            <label for="user_id">User ID</label>
+                            <input type="text" name="user_id" class="form-control" id="user_id" value="{{ $product->user_id }}" ariadescribedby="user_id" >
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contact</label>
+                            <input type="text" name="contact" class="form-control" id="contact" value="{{ $product->contact }}" ariadescribedby="contact" >
                         </div>
                         
                         <div class="form-group">

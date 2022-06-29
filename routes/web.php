@@ -55,3 +55,4 @@ Route::resource('/userEdit/', App\Http\Controllers\UserOfferController::class);
 // Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
 Route::post('/store', [App\Http\Controllers\CheckoutController::class, 'store'])->name('store');
 Route::get('/terms', [App\Http\Controllers\TermsController::class, 'terms'])->name('terms');
+Route::post('replicate', [App\Http\Controllers\CheckoutController::class, 'replicate'])->name('replicate');

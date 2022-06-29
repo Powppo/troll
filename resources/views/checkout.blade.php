@@ -36,7 +36,7 @@
             <div class="card">
             <div class="card-header">{{ __('Checkout') }}</div>
                 <div class="card-body">
-                    <form action="{{ route('store') }}" method="POST">
+                    <form action="{{ route('replicate') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="">Payment</label>

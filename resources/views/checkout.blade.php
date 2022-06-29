@@ -41,8 +41,8 @@
                         <div class="form-group">
                             <label for="">Payment</label>
                             <select name="payment" class="form-control">
-                                @foreach($payment as $pym)
-                                    <option value="{{$pym->id}}">{{$pym->payment_method}}</option>
+                                @foreach($upload_offers as $pym)
+                                    <option value="{{$pym->id}}">{{$pym->item_name}}</option>
                                 @endforeach
                             </select>
                         </div>

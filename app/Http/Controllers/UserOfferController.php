@@ -68,7 +68,7 @@ class UserOfferController extends Controller
         ]);
         if ($request->file('image'))
         {
-            $validateData['image'] = $request->file('image')->store('product', 'public');
+            $validateData['image'] = $request->file('image')->store('product');
         }
 
         uploadOffer::create($validateData);
@@ -84,5 +84,83 @@ class UserOfferController extends Controller
             return redirect('login');
         }
     }
+
+    public function show(uploadOffer $product)
+    {
+        // $product = uploadOffer::with('category')->where('id', $product);
+        return view('userShow', [
+            'product' => $product,
+            'categories' => category::all(),
+            'country' => countryModel::all()
+        ]);
+    }
+
+    public function edit(uploadOffer $product)
+    {
+        // $tags = Tag::all();
+        // $product_tag = $product->tag;
+        // $diff = $tags->diff($product_tag);
+        $country = countryModel::all();
+        $city = cityModel::all();
+        $user = auth()->user();
+        return view('userEdit', compact('user', 'country','city'), [
+            'product' => $product,
+            'categories' => category::all(),   
+            
+        ]);
+    }
+
+   /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\uploadOffer  $request
+     * @param  \App\Models\uploadOffer  $Product
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, uploadOffer $product)
+    {
+        $rules = [
+            'category_id' => 'required',
+            'item_name' => 'required',
+            'slug' => 'required|unique:upload_offers',
+            'owner' => 'required',
+            'user_id' => 'required',
+            'quantity' => 'required',
+            'country_id' => 'required',
+            'city_id' => 'required',
+            'contact' => 'required',
+            'image' => 'image|file|max:1024',
+        ];
+
+        if ($request->slug != $product->slug) {
+            $rules['slug'] = 'required|unique:products';
+        }
+
+        $validateData = $request->validate($rules);
+
+        $validateData['small_description'] = Str::limit(strip_tags($request->description), 200);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validateData['image'] = $request->file('image')->store('Product');
+        }
+        
+        uploadOffer::where('id', $product->id)
+            ->update($validateData);
+        $product->tag()->sync($request->tag);
+        return redirect('/userShow')->with('success', 'Product Succesful Update');
+    }
+
+    public function destroy(uploadOffer $category)
+    {
+        if ($category->image) {
+            Storage::delete($category->image);
+        }
+        uploadOffer::destroy($category->id);
+        return redirect('/userOffers')->with('success', 'Category Succesful Delete');
+    }
+
 
 }

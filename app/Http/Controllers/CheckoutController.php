@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\CheckoutModel;
 use App\Models\uploadOffer;
 use App\Models\PaymentModel;
+use Illuminate\Support\Facades\Auth;
 use DB;
 
 class CheckoutController extends Controller
@@ -14,14 +15,16 @@ class CheckoutController extends Controller
     {
         $product = uploadOffer::with('countryModel')->get();
         $checkout = CheckoutModel::with('payment')->get();
-        return view('checkout', 'product',['checkout' => $checkout], ['product' => $product]);
+        $upload_offers = uploadOffer::where('user_id', Auth::id())->get();
+        return view('checkout', 'upload_offers', 'product',['checkout' => $checkout], ['product' => $product], ['upload_offers' => $upload_offers]);
     }
 
     public function checkout()
     {
         $product = uploadOffer::with('countryModel')->get();
         $payment = PaymentModel::all();
-        return view('checkout', 'product', ['product' => $product], ['payment' => $payment]);
+        $upload_offers = uploadOffer::where('user_id', Auth::id())->get();
+        return view('checkout', 'upload_offers', 'product', ['product' => $product], ['payment' => $payment], ['upload_offers' => $upload_offers]);
     }
 
     public function store(Request $request)

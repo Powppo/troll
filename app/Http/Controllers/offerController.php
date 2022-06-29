@@ -11,6 +11,7 @@ use App\Models\PaymentModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class offerController extends Controller
@@ -68,7 +69,7 @@ class offerController extends Controller
         ]);
         if ($request->file('image'))
         {
-            $validateData['image'] = $request->file('image')->store('product');
+            $validateData['image'] = $request->file('image')->store('product', 'public');
         }
 
         uploadOffer::create($validateData);
@@ -96,14 +97,16 @@ class offerController extends Controller
     {
         $city = cityModel::all();
         $checkout = CheckoutModel::with('payment',)->get();
-       
+        $upload_offers = uploadOffer::where('user_id', Auth::id())->get();
         // $product = uploadOffer::with('countryModel')->get();
         // $product = uploadOffer::with('category')->where('id', $product);
         return view('checkout', [
             'product' => $product,
             'city' => cityModel::all(),
+            'upload_offers' => $upload_offers,
             'checkout' => $checkout,
             'payment' => PaymentModel::all(),
+            
         ]);
     }
 

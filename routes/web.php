@@ -45,7 +45,11 @@ Route::get('/show/{product:slug}', [App\Http\Controllers\offerController::class,
 Route::get('/checkout/{product:slug}', [App\Http\Controllers\offerController::class, 'co']);
 
 /* User Offer */
-
+Route::get('/userShow/{product:slug}', [App\Http\Controllers\UserOfferController::class, 'show'])->name('userProduct');
+// Route::get('/userEdit/{product:slug}', [App\Http\Controllers\UserOfferController::class, 'edit'])->name('userEdit');
+Route::get('/userEdit/{product:slug}', [App\Http\Controllers\UserOfferController::class, 'destroy'])->name('userEdit');
+// Route::get('/userEdit/{product:slug}', [App\Http\Controllers\UserOfferController::class, 'update'])->name('update');
+Route::resource('/userEdit/', App\Http\Controllers\UserOfferController::class);
 
 /* CO */
 // Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');

@@ -38,6 +38,7 @@
                 <div class="card-body">
                     <form action="{{ route('updateOffer') }}" method="POST">
                         @csrf
+                        @method('GET')
                         <div class="form-group">
                             <label for="owner">Owner</label>
                             <input type="text" name="owner" class="form-control" id="owner" value="{{ $product->owner }}" ariadescribedby="owner" >
